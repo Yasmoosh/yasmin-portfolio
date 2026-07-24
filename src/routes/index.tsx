@@ -186,7 +186,6 @@ function About() {
       <p className="text-lg leading-relaxed text-foreground/80 sm:text-xl">
         An Instructional Design student based in Israel.
         <br />
-        <br />
         Also a programmer specializing in gamified learning, digital training
         modules, and seamless UI/UX.
       </p>
