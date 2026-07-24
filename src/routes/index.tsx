@@ -247,7 +247,7 @@ function Work() {
     <section id="work" className="mx-auto max-w-6xl px-6 pb-24">
       <div className="mb-10 flex items-end justify-between">
         <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-foreground">
-          Selected work
+          MY RECENT PROJECTS
         </h2>
         <span className="text-sm text-muted-foreground">2024 – 2026</span>
       </div>
