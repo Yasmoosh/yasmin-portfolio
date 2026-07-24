@@ -124,24 +124,25 @@
   position: relative;
   display: inline-block;
   color: transparent;
-  -webkit-text-stroke: 1.25px hsl(0 0% 12%);
-  transition: color 0.25s ease;
+  -webkit-text-stroke: 1px hsl(0 0% 12%);
+  transition: color 0.2s ease;
 }
 .hobby::before {
   content: "";
   position: absolute;
-  inset: 0.08em -0.15em;
+  inset: 0.12em -0.18em 0.05em -0.18em;
   background: var(--hobby-bg, transparent);
-  border-radius: 6px;
+  border-radius: 4px;
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.2s ease;
 }
 .hobby:hover {
-  color: hsl(0 0% 12%);
+  color: hsl(0 0% 8%);
   -webkit-text-stroke: 0 transparent;
 }
 .hobby:hover::before {
   opacity: 1;
 }
+
 
