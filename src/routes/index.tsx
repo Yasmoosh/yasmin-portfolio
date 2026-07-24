@@ -184,13 +184,16 @@ function About() {
   return (
     <section id="about" className="mx-auto max-w-3xl px-6 pb-20">
       <p className="text-lg leading-relaxed text-foreground/80 sm:text-xl">
-        Hi, I'm Yasmin Greenholts. A Learning Technologies student, programmer,
-        and instructional designer specializing in gamified learning, digital
-        training modules, and seamless UI/UX.
+        An Instructional Design student based in Israel.
+        <br />
+        <br />
+        Also a programmer specializing in gamified learning, digital training
+        modules, and seamless UI/UX.
       </p>
     </section>
   );
 }
+
 
 function ProjectCard({ project }: { project: Project }) {
   const inner = (
