@@ -80,10 +80,10 @@
   --marker-yellow: #fff59d;
 
   /* Hero hobby hover colors — bold/vibrant */
-  --hobby-design: #b6f09c;   /* bright green */
-  --hobby-code: #a5b4fc;     /* soft blue-violet */
-  --hobby-books: #ffb37a;    /* warm apricot */
-  --hobby-bees: #ffe066;     /* mustard yellow */
+  --hobby-design: #c9b9f2;
+  --hobby-code: #aad6fc;
+  --hobby-books: #b2e5c8;
+  --hobby-bees: #e9cd6d;
 
 
   /* Project tiles */
@@ -127,6 +127,7 @@
 .hobby {
   position: relative;
   display: inline-block;
+  isolation: isolate;
   color: #ffffff;
   -webkit-text-stroke: 2px hsl(0 0% 10%);
   paint-order: stroke fill;
