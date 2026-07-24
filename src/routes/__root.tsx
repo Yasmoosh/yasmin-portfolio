@@ -125,27 +125,23 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function SiteNav() {
+  const linkCls =
+    "text-sm tracking-[0.18em] uppercase font-medium text-foreground/80 hover:text-foreground transition-colors";
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <Link to="/" className="text-base font-semibold tracking-tight text-foreground">
+    <header className="w-full bg-background">
+      <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-10 py-8">
+        <Link to="/" className="text-sm tracking-[0.18em] uppercase font-semibold text-foreground">
           Yasmin Greenholts
         </Link>
-        <ul className="flex items-center gap-6 text-sm font-medium text-foreground/80">
+        <ul className="flex items-center gap-10">
           <li>
-            <Link to="/" activeOptions={{ exact: true }} activeProps={{ className: "text-foreground" }} className="hover:text-foreground transition-colors">
+            <Link to="/" activeOptions={{ exact: true }} className={linkCls}>
               Home
             </Link>
           </li>
-          <li>
-            <a href="#about" className="hover:text-foreground transition-colors">About</a>
-          </li>
-          <li>
-            <a href="#work" className="hover:text-foreground transition-colors">Work</a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
-          </li>
+          <li><a href="#about" className={linkCls}>About</a></li>
+          <li><a href="#work" className={linkCls}>Work</a></li>
+          <li><a href="#contact" className={linkCls}>Contact</a></li>
         </ul>
       </nav>
     </header>
