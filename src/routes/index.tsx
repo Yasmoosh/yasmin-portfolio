@@ -148,8 +148,9 @@ function Hero() {
           </span>
         </span>
         <span className="mt-2 block">
-          I{" "}
-          <Hoverable color="hobby-design">design learning experiences</Hoverable>
+          <span className="whitespace-nowrap">I{" "}
+            <Hoverable color="hobby-design">design learning experiences</Hoverable>
+          </span>
           {", "}
           <Hoverable color="hobby-code">write code</Hoverable>
           {", "}
