@@ -79,11 +79,12 @@
   /* Yellow marker highlight for name (glorialo-style) */
   --marker-yellow: #fff59d;
 
-  /* Hero hobby hover colors */
-  --hobby-design: #ffb37a;   /* warm apricot */
+  /* Hero hobby hover colors — bold/vibrant */
+  --hobby-design: #b6f09c;   /* bright green */
   --hobby-code: #a5b4fc;     /* soft blue-violet */
-  --hobby-books: #b7d69a;    /* olive green */
+  --hobby-books: #ffb37a;    /* warm apricot */
   --hobby-bees: #ffe066;     /* mustard yellow */
+
 
   /* Project tiles */
   --tile-1: oklch(0.82 0.13 30);   /* coral */
