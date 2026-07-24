@@ -246,11 +246,12 @@ function Work() {
   return (
     <section id="work" className="mx-auto max-w-6xl px-6 pb-24">
       <div className="mb-10 flex items-end justify-between">
-        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+        <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-foreground">
           Selected work
         </h2>
         <span className="text-sm text-muted-foreground">2024 – 2026</span>
       </div>
+
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p) => (
           <ProjectCard key={p.title} project={p} />
