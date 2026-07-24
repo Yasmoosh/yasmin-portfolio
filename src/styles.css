@@ -79,11 +79,12 @@
   /* Yellow marker highlight for name (glorialo-style) */
   --marker-yellow: #fff59d;
 
-  /* Hero hobby hover colors */
-  --hobby-design: #ffb37a;   /* warm apricot */
+  /* Hero hobby hover colors — bold/vibrant */
+  --hobby-design: #b6f09c;   /* bright green */
   --hobby-code: #a5b4fc;     /* soft blue-violet */
-  --hobby-books: #b7d69a;    /* olive green */
+  --hobby-books: #ffb37a;    /* warm apricot */
   --hobby-bees: #ffe066;     /* mustard yellow */
+
 
   /* Project tiles */
   --tile-1: oklch(0.82 0.13 30);   /* coral */
@@ -119,13 +120,17 @@
   }
 }
 
-/* Outlined hobby text with hover fill */
+/* Outlined hobby text — stroke sits OUTSIDE the letter shape.
+   Trick: color matches the page background (white) and paint-order draws
+   the stroke first, then the fill on top — so only the outer half of the
+   stroke remains visible, giving a clean outside-only outline. */
 .hobby {
   position: relative;
   display: inline-block;
-  color: transparent;
-  -webkit-text-stroke: 1px hsl(0 0% 12%);
-  transition: color 0.2s ease;
+  color: #ffffff;
+  -webkit-text-stroke: 2px hsl(0 0% 10%);
+  paint-order: stroke fill;
+  transition: color 0.2s ease, -webkit-text-stroke-color 0.2s ease;
 }
 .hobby::before {
   content: "";
@@ -139,10 +144,11 @@
 }
 .hobby:hover {
   color: hsl(0 0% 8%);
-  -webkit-text-stroke: 0 transparent;
+  -webkit-text-stroke-color: transparent;
 }
 .hobby:hover::before {
   opacity: 1;
 }
+
 
 
