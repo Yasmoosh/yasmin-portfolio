@@ -148,8 +148,9 @@ function Hero() {
           </span>
         </span>
         <span className="mt-2 block">
-          I{" "}
-          <Hoverable color="hobby-design">design learning experiences</Hoverable>
+          <span className="whitespace-nowrap">I{" "}
+            <Hoverable color="hobby-design">design learning experiences</Hoverable>
+          </span>
           {", "}
           <Hoverable color="hobby-code">write code</Hoverable>
           {", "}
@@ -182,7 +183,7 @@ function Hoverable({
 
 function About() {
   return (
-    <section id="about" className="mx-auto max-w-3xl px-6 pb-20">
+    <section id="about" className="max-w-3xl px-6 pb-20 text-left">
       <p className="text-lg leading-relaxed text-foreground/80 sm:text-xl">
         An Instructional Design student based in Israel.
         <br />
