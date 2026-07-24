@@ -132,20 +132,32 @@ function HobbySpan({
 
 function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-6 pt-16 pb-12 sm:pt-24 sm:pb-20">
-      <p className="mb-6 text-lg font-medium text-muted-foreground sm:text-xl">
-        Hi, I'm Yasmin
-      </p>
-      <h1 className="text-4xl font-semibold leading-[1.15] tracking-tight text-foreground sm:text-6xl md:text-7xl">
-        I{" "}
-        <Hoverable color="hobby-design">design learning experiences</Hoverable>
-        {", "}
-        <Hoverable color="hobby-code">write code</Hoverable>
-        {", "}
-        <Hoverable color="hobby-books">read books</Hoverable>
-        {", and "}
-        <Hoverable color="hobby-bees">keep bees</Hoverable>
-        .
+    <section className="mx-auto max-w-[1400px] px-10 pt-16 pb-16 sm:pt-24 sm:pb-24">
+      <h1 className="text-4xl font-semibold leading-[1.15] tracking-tight text-foreground sm:text-6xl md:text-[5.25rem]">
+        <span className="block">
+          Hi, I'm{" "}
+          <span
+            className="relative inline-block px-2"
+            style={{
+              background: "var(--marker-yellow)",
+              boxDecorationBreak: "clone",
+              WebkitBoxDecorationBreak: "clone",
+            }}
+          >
+            Yasmin
+          </span>
+        </span>
+        <span className="mt-2 block">
+          I{" "}
+          <Hoverable color="hobby-design">design learning experiences</Hoverable>
+          {", "}
+          <Hoverable color="hobby-code">write code</Hoverable>
+          {", "}
+          <Hoverable color="hobby-books">read books</Hoverable>
+          {", and "}
+          <Hoverable color="hobby-bees">keep bees</Hoverable>
+          .
+        </span>
       </h1>
     </section>
   );
@@ -159,13 +171,11 @@ function Hoverable({
   color: string;
 }) {
   return (
-    <span className="group relative inline-block">
-      <span
-        aria-hidden
-        className="pointer-events-none absolute inset-x-[-0.15em] inset-y-[0.05em] -z-10 rounded-md opacity-0 transition-all duration-300 group-hover:opacity-100"
-        style={{ backgroundColor: `var(--${color})` }}
-      />
-      <span className="relative">{children}</span>
+    <span
+      className="hobby"
+      style={{ ["--hobby-bg" as string]: `var(--${color})` }}
+    >
+      {children}
     </span>
   );
 }
