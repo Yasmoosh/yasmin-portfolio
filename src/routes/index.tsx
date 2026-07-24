@@ -171,21 +171,11 @@ function Hoverable({
   color: string;
 }) {
   return (
-    <span className="group relative inline-block align-baseline">
-      <span
-        aria-hidden
-        className="pointer-events-none absolute inset-x-[-0.15em] inset-y-[0.05em] -z-10 rounded-md opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        style={{ backgroundColor: `var(--${color})` }}
-      />
-      <span
-        className="relative transition-colors duration-300 group-hover:[-webkit-text-stroke:0_transparent] group-hover:text-foreground"
-        style={{
-          WebkitTextStroke: "1px hsl(0 0% 10%)",
-          color: "transparent",
-        }}
-      >
-        {children}
-      </span>
+    <span
+      className="hobby"
+      style={{ ["--hobby-bg" as string]: `var(--${color})` }}
+    >
+      {children}
     </span>
   );
 }
