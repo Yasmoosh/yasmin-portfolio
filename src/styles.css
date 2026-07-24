@@ -55,12 +55,12 @@
 
 :root {
   --radius: 0.625rem;
-  /* Cream/warm off-white background inspired by glorialo.design */
-  --background: oklch(0.972 0.015 90);
-  --foreground: oklch(0.18 0.02 60);
-  --card: oklch(0.98 0.01 90);
-  --card-foreground: oklch(0.18 0.02 60);
-  --popover: oklch(0.98 0.01 90);
+  /* Clean white background like glorialo.design */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.15 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0 0);
+  --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.02 60);
   --primary: oklch(0.15 0 0);
   --primary-foreground: oklch(1 0 0);
