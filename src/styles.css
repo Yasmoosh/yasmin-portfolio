@@ -127,6 +127,7 @@
 .hobby {
   position: relative;
   display: inline-block;
+  isolation: isolate;
   color: #ffffff;
   -webkit-text-stroke: 2px hsl(0 0% 10%);
   paint-order: stroke fill;
