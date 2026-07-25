@@ -80,15 +80,15 @@ const projects: Project[] = [
     tile: "bg-tile-6",
   },
   {
-    title: "Docu-Ecology: Following Wild Bees",
-    subtitle: "Script, production and editing of a short documentary on wild bees' ecological role.",
+    title: "Short Film: Following Wild Bees",
+    subtitle: "Script, production and editing of a short film on wild bees' ecological role.",
     href: "https://drive.google.com/file/d/1x5ubdMJARr1YeZygw4oZOpMf6lYUS7c_/view",
     image: img8.url,
     tile: "bg-tile-7",
   },
   {
     title: "Needs Analysis & Design Document",
-    subtitle: "Comprehensive organizational analysis and spec, from discovery to implementation (ADDIE).",
+    subtitle: "Comprehensive organizational analysis and spec, from discovery to implementation (with ADDIE method).",
     tile: "bg-tile-8",
   },
   {
@@ -149,7 +149,7 @@ function Hero() {
         </span>
         <span className="mt-2 block">
           <span className="whitespace-nowrap">I{" "}
-            <Hoverable color="hobby-design">design learning experiences</Hoverable>
+            <Hoverable color="hobby-design">design learning</Hoverable>
           </span>
           {", "}
           <Hoverable color="hobby-code">write code</Hoverable>
@@ -185,7 +185,9 @@ function About() {
   return (
     <section id="about" className="max-w-3xl px-6 pb-20 text-left">
       <p className="text-lg leading-relaxed text-foreground/80 sm:text-xl">
-        An Instructional Design student based in Israel.
+        Hello! If you came here your'e probably wondering who am I?
+        <br />
+        Glad you asked, I am an Instructional Design student based in Israel.
         <br />
         Also a programmer specializing in gamified learning, digital training
         modules, and seamless UI/UX.
@@ -271,7 +273,7 @@ function Connect() {
         Let's connect!
       </h2>
       <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground">
-        Open to collaborations, internships, and thoughtful projects in learning
+        Open to collaborations, job offers, and thoughtful projects in learning
         design and technology.
       </p>
       <div className="mt-10 flex items-center justify-center gap-4">
