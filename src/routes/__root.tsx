@@ -139,9 +139,11 @@ function SiteNav() {
               Home
             </Link>
           </li>
-          <li><a href="#work" className={linkCls}>PROJECTS</a></li>
-          <li><a href="#work" className={linkCls}>PLAY</a></li>
-          <li><a href="#about" className={linkCls}>ABOUT</a></li>
+          <li><a href="/#work" className={linkCls}>PROJECTS</a></li>
+          <li><a href="/#work" className={linkCls}>PLAY</a></li>
+          <li>
+            <Link to="/about" className={linkCls}>ABOUT</Link>
+          </li>
         </ul>
       </nav>
     </header>

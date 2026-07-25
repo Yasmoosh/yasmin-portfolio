@@ -1,85 +1,61 @@
-# תוכנית: עמוד הבית של הפורטפוליו
+## About page plan
 
-בהשראת glorialo.design — מינימליסטי, רקע בהיר, פונט Montserrat, אינטראקציות hover צבעוניות. כרגע עמוד הבית בלבד; שאר העמודים בהמשך.
+Build a new `/about` route styled to match the existing portfolio (Montserrat, white bg, hobby palette) but structured like calebixca.com/about — with a top skills marquee and a timeline-style resume below.
 
-## מבנה העמוד
+### 1. Navigation
 
-```text
-┌─────────────────────────────────────────────┐
-│ NAV: Yasmin Greenholts   Home About Work Contact │
-├─────────────────────────────────────────────┤
-│ HERO                                         │
-│ Hi, I'm Yasmin                               │
-│ I [design learning experiences], [write      │
-│ code], [read books], and [keep bees].        │
-│  ↑ כל ביטוי מודגש = צבע ייחודי ב-hover      │
-├─────────────────────────────────────────────┤
-│ INTRO (טקסט משני קטן יותר)                   │
-│ Hi, I'm Yasmin Greenholts. A Learning        │
-│ Technologies student, programmer, and        │
-│ instructional designer specializing in       │
-│ gamified learning, digital training modules, │
-│ and seamless UI/UX.                          │
-├─────────────────────────────────────────────┤
-│ WORK — רשת של מלבנים צבעוניים                │
-│ [Project 1]  [Project 2]                     │
-│ [Project 3]  [Project 4]  ...                │
-│ (כל מלבן: כותרת + תת-כותרת + תמונה, לחיץ)   │
-├─────────────────────────────────────────────┤
-│ LET'S CONNECT                                │
-│  ✉ mail   in LinkedIn                        │
-└─────────────────────────────────────────────┘
-```
+- Update `src/routes/__root.tsx`: turn "ABOUT" into a real `<Link to="/about">` (keep uppercase style). Leave PROJECTS/PLAY as-is (hash links) for now.
 
-## סקשן Hero — צבעי hover לביטויים
+### 2. New route: `src/routes/about.tsx`
 
-ארבעה ביטויים ניתנים ל-hover, כל אחד עם צבע רקע/הדגשה משלו (בהשראת הפלטה של glorialo — צבעים חמים ורוויים על רקע קרם):
+Head metadata: unique title/description for the About page.
 
-- **design learning experiences** — כתום/אפריקוט
-- **write code** — כחול-סגלגל
-- **read books** — ירוק זית
-- **keep bees** — צהוב חרדל
+**Section A — Skills marquee (top)**
 
-ב-hover: הרקע של הביטוי נצבע, שאר הטקסט נשאר שחור.
+- One horizontal row of pill-shaped skill tags scrolling from left to right (infinite loop via CSS `@keyframes` translateX + duplicated content for seamless loop; pauses on hover).
+- Pills use the site's hobby colors (`--hobby-design`, `--hobby-code`, `--hobby-books`, `--hobby-bees`) cycled across tags, with subtle 1px border and rounded-full styling — matching the site's palette instead of Caleb's orange.
+- Skills (from `skills.docx`):
+Unity 2D · C# Programming · HTML5 & CSS3 · JavaScript · Figma (UI/UX) · Articulate Storyline · Moodle LMS · Lovable.dev · Adobe Illustrator · GitHub Pages · Advanced Excel · Canva · UI/UX Design · Gamification · Content Scripting · Training & Onboarding · Public Speaking
 
-## סקשן Work — 10 פרויקטים
+**Section B — Intro paragraph**
+Short English intro translated from resume summary:
 
-כל כרטיס = מלבן צבעוני עם תמונה בפנים, כותרת ותת-כותרת מתחת. לחיצה על כל המלבן פותחת את הקישור ב-tab חדש. פרויקטים ללא קישור מציגים תגית "Coming soon" ואינם לחיצים.
+> 👋 Hi, I'm Yasmin - an Instructinal Design student at HIT entering year 3, with a strong background in developing learning solutions and complex instructional programs, plus technical development skills. I break down complex material into interactive digital learning.
 
-תמונות: יחולצו מהמסמך שהעלית (image1–image8) ויועלו כ-Lovable Assets.
+**Section C — Timeline (mirrors Caleb's about layout)**
+Two-column rows: left = year (muted, small), right = role/title (bold), org, dates, bullets. Vertical rhythm with generous spacing, thin divider between entries.
 
-| # | כותרת | תת-כותרת | קישור |
-|---|---|---|---|
-| 1 | Attack on Kraken | מחולל משחקי מיון (Unity & C#) | triangle.telem-hit.net/.../AttackOnKraken |
-| 2 | קורס דיגיטלי: הכיתה ההפוכה | דף נחיתה + קורס במערכת Moodle | telemview.telem-hit.net/product/4458 |
-| 3 | Flipped Classroom Lab | סביבה חווייתית להכשרת מורים (Lovable & HTML/CSS) | classroom-flip-lab.lovable.app |
-| 4 | ShipEat | משחק ארקייד ב-Game Jam (Web & JS) | yasmoosh.github.io/ShipEat |
-| 5 | לומדת בטיחות: גינה קהילתית | לומדה משחקית לילדים (Storyline) | Coming soon |
-| 6 | Blip | אב-טיפוס UI/UX לשפת גוף (Figma) | figma.com/proto/.../Blip |
-| 7 | דוקו-אקולוגיה: דבורי הבר | סרט תיעודי קצר | drive.google.com/... |
-| 8 | ניתוח צרכים ומסמך אפיון | מטלת סוף שנה, ADDIE | Coming soon |
-| 9 | אתר אימוץ חתולים וכלבים | פרונט-אנד למיזם חברתי (HTML/CSS/JS) | yasmoosh.github.io/Adoption-Site |
-| 10 | 5 דרכים לשילוב AI בכיתה | מדריך חזותי למורים (Canva) | canva.link/rtzpruqz8jtp9ys |
+**Experience**
 
-לשני הפרויקטים ללא תמונה במסמך: placeholder צבעוני עם הכותרת בלבד.
+- **2024** — Research Support Technician · Hazera Ltd. · Mar 2024 – Nov 2024
+  - Managed complex projects: led trials across multiple sites in parallel, with tight timelines and real-time problem-solving.
+  - Data analysis & information systems: ongoing documentation, tracking, and analysis of trial results in Excel.
+  - Organization & optimization: structured infrastructure and managed equipment/inventory to improve operational effectiveness.
 
-## Nav
+**Military Service**
 
-לוגו/שם בצד שמאל: **Yasmin Greenholts**. קישורים בצד ימין: Home, About, Work, Contact — כרגע ללא sub-items, כפי שביקשת.
+- **2020–2023** — Naval Intelligence Analyst · Israeli Navy · Sergeant
+  - Instructional design & development: broke down complex content, wrote lesson plans, and built large-scale simulation exercises for a reserve force of 100+ personnel.
+  - Command & training management: directly commanded an advanced intelligence course and ran professional training programs for operators before operational activity.
+  - Mentoring & knowledge retention: managed onboarding, training, and refresher days.
+  - Learning events: planned and produced peak-days, workshops, and professional lectures to deepen unit expertise.
 
-## Let's connect
+**Education**
 
-תחתית העמוד, גדול ומרכזי כמו אצל גלוריה:
-- **Let's connect** ככותרת
-- אייקון מייל → `mailto:yasmin295g@gmail.com`
-- אייקון LinkedIn → `https://www.linkedin.com/in/yasmin-greenholts-60b0b0274`
+- **2024 – Present** — B.A. Learning Technologies · Holon Institute of Technology (HIT)
+  - Entering year 3. Focus on instructional methodology, development & programming, and UI/UX design.
+- **2017–2020** — ORT High School
+  - Full matriculation, 10-unit Software Engineering. Technological matriculation diploma and Mofet excellence certificate.
 
-## Technical
+*(The "Selected Projects" list from the resume is already covered by the Home page's project grid, so I'll skip it on About to avoid duplication — flag if you want it included here too.)*
 
-- Route: עדכון `src/routes/index.tsx` (מחיקת placeholder).
-- Nav משותף ב-`src/routes/__root.tsx` (יישאר לעמודים הבאים).
-- פונט **Montserrat** נטען כ-`<link>` מ-Google Fonts ב-`__root.tsx` head, ומוגדר כ-`--font-sans` ב-`@theme` ב-`src/styles.css`.
-- פלטת צבעים חדשה ב-`src/styles.css` (רקע קרם + 4 צבעי hero + צבעי מלבני work).
-- תמונות הפרויקטים יחולצו מהמסמך ויועלו דרך `lovable-assets create`.
-- SEO: `head()` ל-index עם title/description/og ייעודיים.
-- אייקונים: `Mail` ו-`Linkedin` מ-`lucide-react`.
+### 3. Styles (`src/styles.css`)
+
+- Add `@keyframes marquee-left` / `marquee-right` and a `.marquee` utility class (flex, `animation` 40s linear infinite, `hover: animation-play-state: paused`).
+- Add small `.skill-pill` helper class for consistent pill look using site palette.
+
+### Technical notes
+
+- No new dependencies; pure CSS marquee (duplicated track for seamless loop).
+- All colors via existing CSS variables — no hardcoded hex in components.
+- Client-safe only; no server functions needed.
