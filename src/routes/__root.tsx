@@ -140,7 +140,31 @@ function SiteNav() {
             </Link>
           </li>
           <li><a href="/#work" className={linkCls}>PROJECTS</a></li>
-          <li><a href="/#work" className={linkCls}>PLAY</a></li>
+          <li className="group relative">
+            <button type="button" className={`${linkCls} inline-flex items-center gap-1`}>
+              PLAY
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                fill="none"
+                className="transition-transform group-hover:rotate-180"
+                aria-hidden="true"
+              >
+                <path d="M1 3l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <div className="invisible absolute left-1/2 top-full z-20 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+              <div className="min-w-[140px] rounded-xl border border-border bg-background py-2 shadow-lg">
+                <Link to="/books" className="block px-4 py-2 text-sm tracking-[0.18em] uppercase font-medium text-foreground/80 hover:bg-hobby-books/40 hover:text-foreground">
+                  Books
+                </Link>
+                <Link to="/bees" className="block px-4 py-2 text-sm tracking-[0.18em] uppercase font-medium text-foreground/80 hover:bg-hobby-bees/40 hover:text-foreground">
+                  Bees
+                </Link>
+              </div>
+            </div>
+          </li>
           <li>
             <Link to="/about" className={linkCls}>ABOUT</Link>
           </li>
@@ -149,6 +173,7 @@ function SiteNav() {
     </header>
   );
 }
+
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
