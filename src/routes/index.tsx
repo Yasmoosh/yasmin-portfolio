@@ -9,6 +9,7 @@ import img5 from "../assets/project-5.png.asset.json";
 import img6 from "../assets/project-6.png.asset.json";
 import img7 from "../assets/project-7.png.asset.json";
 import img8 from "../assets/project-8.png.asset.json";
+import imgGarden from "../assets/community-garden.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -70,6 +71,8 @@ const projects: Project[] = [
   {
     title: "Community Garden Safety",
     subtitle: "A gamified learning module for children ages 6–12, built in Storyline.",
+    href: "https://360.articulate.com/review/content/f778666f-56da-4532-a303-65097b2a4dd0/review",
+    image: imgGarden.url,
     tile: "bg-tile-5",
   },
   {
@@ -132,7 +135,7 @@ function HobbySpan({
 
 function Hero() {
   return (
-    <section className="mx-auto max-w-[1400px] px-10 pt-16 pb-16 sm:pt-24 sm:pb-24">
+    <section className="mx-auto max-w-6xl px-6 pt-16 pb-16 sm:pt-24 sm:pb-24">
       <h1 className="text-4xl font-semibold leading-[1.15] tracking-tight text-foreground sm:text-6xl md:text-[5.25rem]">
         <span className="block">
           Hi, I'm{" "}
@@ -183,7 +186,7 @@ function Hoverable({
 
 function About() {
   return (
-    <section id="about" className="mx-auto max-w-[1400px] px-10 pb-20 text-left">
+    <section id="about" className="mx-auto max-w-6xl px-6 pb-20 text-left">
       <p className="max-w-3xl text-lg leading-relaxed text-foreground/80 sm:text-xl">
         Hello! If you came here your'e probably wondering who am I?
         <br />
