@@ -40,6 +40,7 @@ const skills = [
   { label: "Content Scripting", color: "hobby-books" },
   { label: "Training & Onboarding", color: "hobby-bees" },
   { label: "Public Speaking", color: "hobby-design" },
+  { label: "Vibe Coding", color: "hobby-code" },
 ];
 
 function SkillsMarquee() {
