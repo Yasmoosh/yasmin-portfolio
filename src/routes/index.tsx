@@ -9,6 +9,7 @@ import img5 from "../assets/project-5.png.asset.json";
 import img6 from "../assets/project-6.png.asset.json";
 import img7 from "../assets/project-7.png.asset.json";
 import img8 from "../assets/project-8.png.asset.json";
+import imgGarden from "../assets/community-garden.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
