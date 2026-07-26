@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import Connect from "../components/Connect";
+import { Connect } from "../components/Connect";
 
 import img1 from "../assets/bees/image1.png.asset.json";
 import img2 from "../assets/bees/image2.png.asset.json";
