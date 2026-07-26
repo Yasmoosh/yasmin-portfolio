@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Connect } from "../components/Connect";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -40,6 +41,7 @@ const skills = [
   { label: "Content Scripting", color: "hobby-books" },
   { label: "Training & Onboarding", color: "hobby-bees" },
   { label: "Public Speaking", color: "hobby-design" },
+  { label: "Vibe Coding", color: "hobby-code" },
 ];
 
 function SkillsMarquee() {
@@ -172,6 +174,7 @@ function About() {
         <TimelineSection title="Military Service" entries={military} />
         <TimelineSection title="Education" entries={education} />
       </div>
+      <Connect />
     </main>
   );
 }
