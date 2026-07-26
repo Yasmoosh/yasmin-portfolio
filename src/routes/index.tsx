@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Linkedin } from "lucide-react";
+import { Connect } from "../components/Connect";
 
 import img1 from "../assets/project-1.png.asset.json";
 import img2 from "../assets/project-2.png.asset.json";
