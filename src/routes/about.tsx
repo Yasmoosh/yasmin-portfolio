@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Connect } from "../components/Connect";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -173,6 +174,7 @@ function About() {
         <TimelineSection title="Military Service" entries={military} />
         <TimelineSection title="Education" entries={education} />
       </div>
+      <Connect />
     </main>
   );
 }

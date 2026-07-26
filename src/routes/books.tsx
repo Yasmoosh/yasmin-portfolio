@@ -73,8 +73,7 @@ const books: Book[] = [
   { title: "The Anthropocene Reviewed", author: "John Green", rating: 4.5, image: b16.url },
 ];
 
-// Deterministic per-index tilt & offset for a scattered, non-grid feel.
-const tilts = [-3, 2, -1.5, 3, -2.5, 1, -2, 2.5, -1, 3.5, -3, 1.5, -2, 2, -1.5, 3, -2.5, 1, -1, 2];
+// Deterministic per-index vertical offset for a staggered, non-grid feel.
 const offsets = [0, 24, 8, 32, 0, 20, 12, 28, 4, 16, 0, 24, 8, 32, 4, 20, 12, 28, 0, 16];
 const widths = [180, 210, 170, 200, 190, 220, 180, 200, 175, 205, 195, 185, 210, 180, 200, 190, 215, 175, 205, 195];
 
@@ -99,7 +98,6 @@ function Stars({ rating }: { rating: number }) {
 }
 
 function BookCard({ book, i }: { book: Book; i: number }) {
-  const rot = tilts[i % tilts.length];
   const top = offsets[i % offsets.length];
   const w = widths[i % widths.length];
   return (
@@ -108,8 +106,8 @@ function BookCard({ book, i }: { book: Book; i: number }) {
       style={{ marginTop: `${top}px` }}
     >
       <div
-        className="group mx-auto transition-transform duration-300 hover:-translate-y-1 hover:rotate-0"
-        style={{ transform: `rotate(${rot}deg)`, maxWidth: `${w}px` }}
+        className="group mx-auto transition-transform duration-300 hover:-translate-y-1"
+        style={{ maxWidth: `${w}px` }}
       >
         <div className="overflow-hidden rounded-md bg-black/5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.35)]">
           <img
