@@ -71,6 +71,8 @@ const projects: Project[] = [
   {
     title: "Community Garden Safety",
     subtitle: "A gamified learning module for children ages 6–12, built in Storyline.",
+    href: "https://360.articulate.com/review/content/f778666f-56da-4532-a303-65097b2a4dd0/review",
+    image: imgGarden.url,
     tile: "bg-tile-5",
   },
   {
