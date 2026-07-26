@@ -135,7 +135,7 @@ function HobbySpan({
 
 function Hero() {
   return (
-    <section className="mx-auto max-w-[1400px] px-10 pt-16 pb-16 sm:pt-24 sm:pb-24">
+    <section className="mx-auto max-w-6xl px-6 pt-16 pb-16 sm:pt-24 sm:pb-24">
       <h1 className="text-4xl font-semibold leading-[1.15] tracking-tight text-foreground sm:text-6xl md:text-[5.25rem]">
         <span className="block">
           Hi, I'm{" "}
