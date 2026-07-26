@@ -186,7 +186,7 @@ function Hoverable({
 
 function About() {
   return (
-    <section id="about" className="mx-auto max-w-[1400px] px-10 pb-20 text-left">
+    <section id="about" className="mx-auto max-w-6xl px-6 pb-20 text-left">
       <p className="max-w-3xl text-lg leading-relaxed text-foreground/80 sm:text-xl">
         Hello! If you came here your'e probably wondering who am I?
         <br />
