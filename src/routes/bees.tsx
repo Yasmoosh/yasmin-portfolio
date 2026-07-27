@@ -120,7 +120,7 @@ function BeesPage() {
           </p>
         </header>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="[column-fill:_balance] columns-2 gap-4">
           {gallery.map((item, i) => (
             <GalleryItem key={i} item={item} i={i} />
           ))}
