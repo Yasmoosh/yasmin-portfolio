@@ -14,13 +14,13 @@ import imgGarden from "../assets/community-garden.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Yasmin Greenholts - Learning Technologies Portfolio" },
+      { title: "Yasmin Greenholts — Learning Technologies Portfolio" },
       {
         name: "description",
         content:
           "I design learning experiences, write code, read books, and keep bees. Portfolio of Yasmin Greenholts, HIT Learning Technologies.",
       },
-      { property: "og:title", content: "Yasmin Greenholts - Portfolio" },
+      { property: "og:title", content: "Yasmin Greenholts — Portfolio" },
       {
         property: "og:description",
         content:
@@ -48,7 +48,7 @@ const projects: Project[] = [
     tile: "bg-tile-1",
   },
   {
-    title: "Flipped Classroom - Digital Course",
+    title: "Flipped Classroom — Digital Course",
     subtitle: "Landing page and asynchronous Moodle course for high-school humanities teachers.",
     href: "https://telemview.telem-hit.net/product/4458",
     image: img3.url,

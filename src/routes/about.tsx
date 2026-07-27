@@ -4,13 +4,13 @@ import { Connect } from "../components/Connect";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About - Yasmin Greenholts" },
+      { title: "About — Yasmin Greenholts" },
       {
         name: "description",
         content:
-          "About Yasmin Greenholts - Learning Technologies student at HIT, instructional designer, and programmer. Experience, military service, and education.",
+          "About Yasmin Greenholts — Learning Technologies student at HIT, instructional designer, and programmer. Experience, military service, and education.",
       },
-      { property: "og:title", content: "About - Yasmin Greenholts" },
+      { property: "og:title", content: "About — Yasmin Greenholts" },
       {
         property: "og:description",
         content:

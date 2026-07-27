@@ -11,13 +11,13 @@ import vid2 from "../assets/bees/video2.mov.asset.json";
 export const Route = createFileRoute("/bees")({
   head: () => ({
     meta: [
-      { title: "Bees - Yasmin Greenholts" },
+      { title: "Bees — Yasmin Greenholts" },
       {
         name: "description",
         content:
-          "Why I grow bees - Yasmin's personal commitment to wild pollinators, backyard hives, and ecological balance.",
+          "Why I grow bees — Yasmin's personal commitment to wild pollinators, backyard hives, and ecological balance.",
       },
-      { property: "og:title", content: "Bees - Yasmin Greenholts" },
+      { property: "og:title", content: "Bees — Yasmin Greenholts" },
       {
         property: "og:description",
         content:
@@ -45,15 +45,15 @@ const gallery: MediaItem[] = [
   { kind: "image", src: img4.url, alt: "In the apiary" },
 ];
 
-const offsets = [0, 16, 4, 20, 8, 12];
-const widths = [200, 240, 190, 230, 210, 220];
+const offsets = [0, 28, 8, 36, 12, 20];
+const widths = [220, 260, 210, 250, 230, 240];
 
 function GalleryItem({ item, i }: { item: MediaItem; i: number }) {
   const top = offsets[i % offsets.length];
   const w = widths[i % widths.length];
   return (
     <div
-      className="mb-6 inline-block w-full break-inside-avoid px-2"
+      className="mb-8 inline-block w-full break-inside-avoid px-2"
       style={{ marginTop: `${top}px` }}
     >
       <div
@@ -111,16 +111,16 @@ function BeesPage() {
             critical ecological impact.
           </p>
           <p className="mt-4 text-base leading-relaxed text-foreground/75">
-            Learning about the global threat of wild bee extinction - often
+            Learning about the global threat of wild bee extinction — often
             worsened by the over-crowding of honeybee hives, which spreads
-            diseases - changed everything for me. Today, my backyard hive
+            diseases — changed everything for me. Today, my backyard hive
             isn't just a hobby; it's my personal commitment to protecting
             these incredible pollinators and raising awareness about
             ecological balance.
           </p>
         </header>
 
-        <div className="[column-fill:_balance] columns-2 gap-4">
+        <div className="[column-fill:_balance] columns-1 gap-4 sm:columns-2 lg:columns-3">
           {gallery.map((item, i) => (
             <GalleryItem key={i} item={item} i={i} />
           ))}

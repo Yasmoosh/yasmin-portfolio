@@ -79,7 +79,7 @@
   /* Yellow marker highlight for name (glorialo-style) */
   --marker-yellow: #fff59d;
 
-  /* Hero hobby hover colors - bold/vibrant */
+  /* Hero hobby hover colors — bold/vibrant */
   --hobby-design: #c9b9f2;
   --hobby-code: #aad6fc;
   --hobby-books: #b2e5c8;
@@ -120,9 +120,9 @@
   }
 }
 
-/* Outlined hobby text - stroke sits OUTSIDE the letter shape.
+/* Outlined hobby text — stroke sits OUTSIDE the letter shape.
    Trick: color matches the page background (white) and paint-order draws
-   the stroke first, then the fill on top - so only the outer half of the
+   the stroke first, then the fill on top — so only the outer half of the
    stroke remains visible, giving a clean outside-only outline. */
 .hobby {
   position: relative;

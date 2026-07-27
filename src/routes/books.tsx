@@ -24,13 +24,13 @@ import b20 from "../assets/books/image20.png.asset.json";
 export const Route = createFileRoute("/books")({
   head: () => ({
     meta: [
-      { title: "Books - Yasmin Greenholts" },
+      { title: "Books — Yasmin Greenholts" },
       {
         name: "description",
         content:
-          "Book recommendations from Yasmin Greenholts - a personal reading gallery with ratings across fantasy, literary fiction, and non-fiction.",
+          "Book recommendations from Yasmin Greenholts — a personal reading gallery with ratings across fantasy, literary fiction, and non-fiction.",
       },
-      { property: "og:title", content: "Books - Yasmin's Recommendations" },
+      { property: "og:title", content: "Books — Yasmin's Recommendations" },
       {
         property: "og:description",
         content:
@@ -150,7 +150,7 @@ function BooksPage() {
             I've loved
           </h1>
           <p className="mt-4 text-base leading-relaxed text-foreground/70">
-            A scattered shelf of recent reads - mostly fantasy, some literary
+            A scattered shelf of recent reads — mostly fantasy, some literary
             fiction, and the occasional non-fiction detour. Ratings are entirely
             my own and change with my mood.
           </p>
