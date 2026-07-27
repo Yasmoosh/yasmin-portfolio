@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Yasmin Greenholts — Learning Technologies Portfolio" },
+      { title: "Yasmin Greenholts - Learning Technologies Portfolio" },
       {
         name: "description",
         content:
           "Portfolio of Yasmin Greenholts, a Learning Technologies student at HIT specializing in gamified learning, digital training modules, and UI/UX.",
       },
       { name: "author", content: "Yasmin Greenholts" },
-      { property: "og:title", content: "Yasmin Greenholts — Learning Technologies Portfolio" },
+      { property: "og:title", content: "Yasmin Greenholts - Learning Technologies Portfolio" },
       {
         property: "og:description",
         content:
