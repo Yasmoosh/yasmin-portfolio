@@ -126,7 +126,11 @@ function BeesPage() {
           ))}
         </div>
       </main>
-      <Connect />
+      <footer className="mx-auto max-w-[1400px] px-10 pb-10 pt-4 text-center">
+        <p className="text-xs text-muted-foreground">
+          © {new Date().getFullYear()} Yasmin Greenholts
+        </p>
+      </footer>
     </>
   );
 }

@@ -133,38 +133,40 @@ function BookCard({ book, i }: { book: Book; i: number }) {
 
 function BooksPage() {
   return (
-    <main className="mx-auto max-w-[1400px] px-10 pb-24 pt-8">
-      <header className="mb-12 max-w-2xl">
-        <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-          <span
-            className="relative inline-block px-2"
-            style={{
-              background: "var(--hobby-books)",
-              boxDecorationBreak: "clone",
-              WebkitBoxDecorationBreak: "clone",
-            }}
-          >
-            Books
-          </span>{" "}
-          I've loved
-        </h1>
-        <p className="mt-4 text-base leading-relaxed text-foreground/70">
-          A scattered shelf of recent reads — mostly fantasy, some literary
-          fiction, and the occasional non-fiction detour. Ratings are entirely
-          my own and change with my mood.
-        </p>
-      </header>
+    <>
+      <main className="mx-auto max-w-[1400px] px-10 pb-24 pt-8">
+        <header className="mb-12 max-w-2xl">
+          <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            <span
+              className="relative inline-block px-2"
+              style={{
+                background: "var(--hobby-books)",
+                boxDecorationBreak: "clone",
+                WebkitBoxDecorationBreak: "clone",
+              }}
+            >
+              Books
+            </span>{" "}
+            I've loved
+          </h1>
+          <p className="mt-4 text-base leading-relaxed text-foreground/70">
+            A scattered shelf of recent reads — mostly fantasy, some literary
+            fiction, and the occasional non-fiction detour. Ratings are entirely
+            my own and change with my mood.
+          </p>
+        </header>
 
-      <div className="[column-fill:_balance] columns-2 gap-4 sm:columns-3 lg:columns-4 xl:columns-5">
-        {books.map((book, i) => (
-          <BookCard key={book.title} book={book} i={i} />
-        ))}
-      </div>
-    </main>
-    <footer className="mx-auto max-w-[1400px] px-10 pb-10 pt-4 text-center">
-      <p className="text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Yasmin Greenholts
-      </p>
-    </footer>
+        <div className="[column-fill:_balance] columns-2 gap-4 sm:columns-3 lg:columns-4 xl:columns-5">
+          {books.map((book, i) => (
+            <BookCard key={book.title} book={book} i={i} />
+          ))}
+        </div>
+      </main>
+      <footer className="mx-auto max-w-[1400px] px-10 pb-10 pt-4 text-center">
+        <p className="text-xs text-muted-foreground">
+          © {new Date().getFullYear()} Yasmin Greenholts
+        </p>
+      </footer>
+    </>
   );
 }
