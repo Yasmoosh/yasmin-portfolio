@@ -188,12 +188,12 @@ function About() {
   return (
     <section id="about" className="mx-auto max-w-6xl px-6 pb-20 text-left">
       <p className="max-w-3xl text-lg leading-relaxed text-foreground/80 sm:text-xl">
-        Hello! If you came here your'e probably wondering who am I?
+        Hello! If you’ve landed here, you’re probably wondering who I am.
         <br />
-        Glad you asked, I am an Instructional Design student based in Israel.
-        <br />
-        Also a programmer specializing in gamified learning, digital training
-        modules, and seamless UI/UX.
+        Glad you asked, I’m a Learning Technologies & Instructional Design student
+        based in Israel, with a passion for code, pedagogy, and AI innovation. As a
+        designer and developer, I specialize in creating gamified learning
+        experiences, digital training modules, and integrating AI in my work.
       </p>
     </section>
   );
