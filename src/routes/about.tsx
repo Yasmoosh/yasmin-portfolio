@@ -115,7 +115,7 @@ const education: Entry[] = [
     title: "High School Diploma",
     org: "ORT High School",
     bullets: [
-      "Full matriculation, 10-unit Software Engineering. Technological matriculation diploma and Mofet excellence certificate.",
+      "Full Bagrut, 10-unit Software Engineering. Technological Bagrut diploma and Mofet excellence certificate.",
     ],
   },
 ];
@@ -161,11 +161,14 @@ function About() {
       <SkillsMarquee />
       <section className="mx-auto max-w-3xl px-6 pt-8">
         <p className="text-lg leading-relaxed text-foreground/85 sm:text-xl">
-          👋 Hi, I'm Yasmin — an Instructional Design student at HIT, entering
-          year 3. I bring a strong background in leading professional training
-          and complex instructional programs, together with solid technical
-          development skills. I love breaking down complex material and turning
-          it into interactive digital learning.
+          👋 Hi, I'm Yasmin, a Learning Technologies & Instructional Design
+          student at HIT (entering year 3) with a passion for driving innovation
+          through AI-integrated development. Combining a strong background in
+          leadership and complex training operations with robust development
+          skills, I specialize in capturing intricate concepts and transforming
+          them into cutting-edge, interactive digital experiences. I thrive on
+          exploring new technological horizons to build learning ecosystems that
+          are adaptive, engaging, and future-ready.
         </p>
       </section>
 
