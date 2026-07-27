@@ -14,13 +14,13 @@ import imgGarden from "../assets/community-garden.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Yasmin Greenholts - Learning Technologies Portfolio" },
+      { title: "Yasmin Greenholts" },
       {
         name: "description",
         content:
           "I design learning experiences, write code, read books, and keep bees. Portfolio of Yasmin Greenholts, HIT Learning Technologies.",
       },
-      { property: "og:title", content: "Yasmin Greenholts - Portfolio" },
+      { property: "og:title", content: "Yasmin Greenholts" },
       {
         property: "og:description",
         content:
