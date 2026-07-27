@@ -4,28 +4,51 @@
 //   dist/client  -> the static site (index.html + hashed assets)
 //   dist/server  -> a server bundle only used to prerender the shell (not deployed)
 //
-// This script flattens dist/client up to ./dist, drops the server bundle, and
+// This script flattens dist/client up into ./dist, drops the server bundle, and
 // adds the files GitHub Pages needs:
 //   - 404.html   : copy of index.html so client-side routes work on hard refresh
 //   - .nojekyll  : stop GitHub from stripping files/folders that start with "_"
 //   - CNAME      : carried over from the repo root for the custom domain
-import { existsSync, copyFileSync, writeFileSync, renameSync, rmSync } from "node:fs";
+//
+// It deliberately never deletes the ./dist directory itself (only its contents),
+// because on Windows an editor/file-watcher can hold a handle on the folder and
+// make removing the root fail with EPERM.
+import { existsSync, copyFileSync, writeFileSync, renameSync, rmSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const root = process.cwd();
 const dist = join(root, "dist");
 const client = join(dist, "client");
-const tmp = join(root, ".dist-client-tmp");
+const server = join(dist, "server");
 
 if (!existsSync(client)) {
   throw new Error(`Expected build output at ${client}. Did "vite build" run first?`);
 }
 
-// Replace ./dist with the contents of ./dist/client.
-rmSync(tmp, { recursive: true, force: true });
-renameSync(client, tmp); // move client out from under dist
-rmSync(dist, { recursive: true, force: true }); // drop dist (incl. the server bundle)
-renameSync(tmp, dist); // client becomes dist
+// Retry helper: Windows file locks (editor/indexer) can make fs ops fail
+// transiently with EPERM/EBUSY. A couple of short synchronous retries clears it.
+function withRetry(fn) {
+  for (let attempt = 0; ; attempt++) {
+    try {
+      return fn();
+    } catch (err) {
+      if (attempt >= 5 || !["EPERM", "EBUSY", "ENOTEMPTY"].includes(err.code)) throw err;
+      const until = Date.now() + 100;
+      while (Date.now() < until) {} // brief synchronous back-off
+    }
+  }
+}
+
+// Move each top-level entry of dist/client up into dist/, replacing any existing.
+for (const name of readdirSync(client)) {
+  const to = join(dist, name);
+  withRetry(() => rmSync(to, { recursive: true, force: true }));
+  withRetry(() => renameSync(join(client, name), to));
+}
+
+// Drop the now-empty client dir and the (undeployed) server bundle.
+withRetry(() => rmSync(client, { recursive: true, force: true }));
+withRetry(() => rmSync(server, { recursive: true, force: true }));
 
 const indexHtml = join(dist, "index.html");
 if (!existsSync(indexHtml)) {
