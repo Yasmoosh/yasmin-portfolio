@@ -45,16 +45,21 @@ const gallery: MediaItem[] = [
   { kind: "image", src: img4.url, alt: "In the apiary" },
 ];
 
-const offsets = [0, 28, 8, 36, 12, 20];
+const offsets = [0, 16, 4, 20, 8, 12];
+const widths = [200, 240, 190, 230, 210, 220];
 
 function GalleryItem({ item, i }: { item: MediaItem; i: number }) {
   const top = offsets[i % offsets.length];
+  const w = widths[i % widths.length];
   return (
     <div
-      className="mb-8 w-full px-2"
+      className="mb-6 inline-block w-full break-inside-avoid px-2"
       style={{ marginTop: `${top}px` }}
     >
-      <div className="group mx-auto w-full transition-transform duration-300 hover:-translate-y-1">
+      <div
+        className="group mx-auto transition-transform duration-300 hover:-translate-y-1"
+        style={{ maxWidth: `${w}px` }}
+      >
         <div className="overflow-hidden rounded-md bg-black/5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.35)]">
           {item.kind === "image" ? (
             <img
@@ -115,7 +120,7 @@ function BeesPage() {
           </p>
         </header>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="[column-fill:_balance] columns-2 gap-4">
           {gallery.map((item, i) => (
             <GalleryItem key={i} item={item} i={i} />
           ))}
