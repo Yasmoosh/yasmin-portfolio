@@ -99,9 +99,9 @@ const experience: Entry[] = [
     org: "Hazera Ltd.",
     dates: "Mar 2024 – Nov 2024",
     bullets: [
-      "Managed complex projects: led trials across multiple sites in parallel, with tight timelines and real-time problem-solving.",
-      "Data analysis & information systems: ongoing documentation, tracking, and analysis of trial results in Excel.",
-      "Organization & optimization: structured infrastructure and managed equipment and inventory to improve operational effectiveness.",
+      "Coordinated multi-site trials, managing timelines and resolving issues as they arose.",
+      "Documented, tracked, and analyzed trial results in Excel.",
+      "Organized equipment and inventory to support efficient operations.",
     ],
   },
 ];
