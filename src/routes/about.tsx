@@ -75,6 +75,25 @@ type Entry = {
 
 const experience: Entry[] = [
   {
+    year: "2026–Present",
+    title: "Digital Learning Developer",
+    org: "720 Chemistry Program · Center for Educational Technology (CET)",
+    bullets: [
+      "Transforms lesson plans into digital learning materials and publishes them in a content management system.",
+      "Designs, edits, and adapts visual assets to illustrate learning content in digital environments.",
+      "Develops HTML and CSS micro-interactions, study cards, and digital components to enrich the learning experience.",
+    ],
+  },
+  {
+    year: "2026–Present",
+    title: "Programming Course Tutor",
+    org: "Holon Institute of Technology (HIT)",
+    bullets: [
+      "Provides academic support and mentorship to students in programming courses within the Learning Technologies degree program.",
+      "Explains technical concepts, guides hands-on practice, and helps students troubleshoot coding problems.",
+    ],
+  },
+  {
     year: "2024",
     title: "Research Support Technician",
     org: "Hazera Ltd.",
@@ -107,7 +126,7 @@ const education: Entry[] = [
     title: "B.A. Learning Technologies",
     org: "Holon Institute of Technology (HIT)",
     bullets: [
-      "Entering year 3. Focus on instructional methodology, development and programming, and UI/UX design.",
+      "Third-year student focusing on instructional methodology, development and programming, and UI/UX design.",
     ],
   },
   {
@@ -115,7 +134,7 @@ const education: Entry[] = [
     title: "High School Diploma",
     org: "ORT High School",
     bullets: [
-      "Full Bagrut, 10-unit Software Engineering. Technological Bagrut diploma and Mofet excellence certificate.",
+      "Full matriculation certificate, including 10 units in Software Engineering. Awarded a Technological Matriculation Diploma and a Mofet Excellence Certificate.",
     ],
   },
 ];
@@ -161,14 +180,13 @@ function About() {
       <SkillsMarquee />
       <section className="mx-auto max-w-3xl px-6 pt-8">
         <p className="text-lg leading-relaxed text-foreground/85 sm:text-xl">
-          👋 Hi, I'm Yasmin, a Learning Technologies & Instructional Design
-          student at HIT (entering year 3) with a passion for driving innovation
-          through AI-integrated development. Combining a strong background in
-          leadership and complex training operations with robust development
-          skills, I specialize in capturing intricate concepts and transforming
-          them into cutting-edge, interactive digital experiences. I thrive on
-          exploring new technological horizons to build learning ecosystems that
-          are adaptive, engaging, and future-ready.
+          👋 Hi, I'm Yasmin, a third-year Learning Technologies student at HIT
+          specializing in instructional design. I combine a strong background
+          in leadership and complex training operations with hands-on experience
+          in digital learning development and programming. I enjoy turning
+          complex ideas into clear, engaging, and interactive learning
+          experiences, and exploring how emerging technologies and AI can make
+          learning more adaptive and accessible.
         </p>
       </section>
 
