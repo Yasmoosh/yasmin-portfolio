@@ -134,7 +134,7 @@ function BookCard({ book, i }: { book: Book; i: number }) {
 function BooksPage() {
   return (
     <>
-      <main className="mx-auto max-w-[1400px] px-10 pb-24 pt-8">
+      <main className="mx-auto max-w-[1400px] px-4 pb-16 pt-6 sm:px-6 sm:pb-24 sm:pt-8 lg:px-10">
         <header className="mb-12 max-w-2xl">
           <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
             <span
@@ -162,7 +162,7 @@ function BooksPage() {
           ))}
         </div>
       </main>
-      <footer className="mx-auto max-w-[1400px] px-10 pb-10 pt-4 text-center">
+      <footer className="mx-auto max-w-[1400px] px-4 pb-8 pt-4 text-center sm:px-6 sm:pb-10 lg:px-10">
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} Yasmin Greenholts
         </p>
@@ -170,3 +170,4 @@ function BooksPage() {
     </>
   );
 }
+
