@@ -56,7 +56,7 @@ const projects: Project[] = [
   },
   {
     title: "Microlearning: Two-Way Data Binding in Blazor",
-    subtitle: "An animated microlearning explainer decoding two-way data binding in Blazor.",
+    subtitle: "An animated microlearning explainer decoding the @bind attribute.",
     href: "https://lnkd.in/p/dyFkqEBj",
     image: "/blazor-microlearning.svg",
     tile: "bg-tile-10",
