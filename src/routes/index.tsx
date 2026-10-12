@@ -135,8 +135,8 @@ function HobbySpan({
 
 function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-6 pt-16 pb-16 sm:pt-24 sm:pb-24">
-      <h1 className="text-4xl font-semibold leading-[1.15] tracking-tight text-foreground sm:text-6xl md:text-[5.25rem]">
+    <section className="mx-auto max-w-6xl px-4 pb-12 pt-12 sm:px-6 sm:pb-24 sm:pt-24">
+      <h1 className="text-[clamp(2.5rem,9vw,4.5rem)] font-semibold leading-[1.08] tracking-tight text-foreground sm:text-6xl sm:leading-[1.15] md:text-[5.25rem]">
         <span className="block">
           Hi, I'm{" "}
           <span
@@ -151,7 +151,7 @@ function Hero() {
           </span>
         </span>
         <span className="mt-2 block">
-          <span className="whitespace-nowrap">I{" "}
+          <span>I{" "}
             <Hoverable color="hobby-design">design learning</Hoverable>
           </span>
           {", "}
@@ -250,8 +250,8 @@ function ProjectCard({ project }: { project: Project }) {
 
 function Work() {
   return (
-    <section id="work" className="mx-auto max-w-6xl px-6 pb-24">
-      <div className="mb-10 flex items-end justify-between">
+    <section id="work" className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+      <div className="mb-10 flex flex-col items-start gap-3 sm:flex-row sm:items-end sm:justify-between">
         <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-foreground">
           MY RECENT PROJECTS
         </h2>
@@ -278,3 +278,4 @@ function Home() {
     </main>
   );
 }
+
