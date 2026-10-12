@@ -147,10 +147,10 @@ function TimelineSection({ title, entries }: { title: string; entries: Entry[] }
         {entries.map((e) => (
           <div
             key={`${e.year}-${e.title}`}
-            className="grid grid-cols-1 gap-4 border-t border-border pt-8 sm:grid-cols-[120px_1fr] sm:gap-10"
+            className="grid min-w-0 grid-cols-1 gap-4 border-t border-border pt-8 sm:grid-cols-[100px_minmax(0,1fr)] sm:gap-6 md:grid-cols-[120px_minmax(0,1fr)] md:gap-10"
           >
             <div className="text-sm font-medium text-muted-foreground">{e.year}</div>
-            <div>
+            <div className="min-w-0">
               <h3 className="text-lg font-semibold text-foreground sm:text-xl">
                 {e.title}
               </h3>
@@ -199,3 +199,4 @@ function About() {
     </main>
   );
 }
+
