@@ -129,11 +129,17 @@ function SiteNav() {
     "text-sm tracking-[0.18em] uppercase font-medium text-foreground/80 hover:text-foreground transition-colors";
   return (
     <header className="w-full bg-background">
-      <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-10 py-8">
-        <Link to="/" className="text-sm tracking-[0.18em] uppercase font-semibold text-foreground">
+      <nav
+        aria-label="Main navigation"
+        className="relative mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-4 py-4 sm:px-6 sm:py-6 lg:px-10 lg:py-8"
+      >
+        <Link
+          to="/"
+          className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.14em] text-foreground sm:text-sm sm:tracking-[0.18em]"
+        >
           Yasmin Greenholts
         </Link>
-        <ul className="flex items-center gap-10">
+        <ul className="hidden items-center gap-5 lg:flex xl:gap-10">
           <li>
             <Link to="/" activeOptions={{ exact: true }} className={linkCls}>
               Home
@@ -169,6 +175,83 @@ function SiteNav() {
             <Link to="/about" className={linkCls}>ABOUT</Link>
           </li>
         </ul>
+        <details className="group relative lg:hidden">
+          <summary
+            aria-label="Toggle navigation menu"
+            className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&::-webkit-details-marker]:hidden"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </summary>
+          <ul className="absolute right-0 top-full z-30 mt-3 flex min-w-52 flex-col gap-1 rounded-2xl border border-border bg-background p-2 shadow-xl">
+            <li>
+              <Link
+                to="/"
+                activeOptions={{ exact: true }}
+                onClick={(event) =>
+                  event.currentTarget.closest("details")?.removeAttribute("open")
+                }
+                className="block rounded-xl px-4 py-3 text-sm font-medium uppercase tracking-[0.12em] text-foreground/80 transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <a
+                href="/#work"
+                onClick={(event) =>
+                  event.currentTarget.closest("details")?.removeAttribute("open")
+                }
+                className="block rounded-xl px-4 py-3 text-sm font-medium uppercase tracking-[0.12em] text-foreground/80 transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <Link
+                to="/books"
+                onClick={(event) =>
+                  event.currentTarget.closest("details")?.removeAttribute("open")
+                }
+                className="block rounded-xl px-4 py-3 text-sm font-medium uppercase tracking-[0.12em] text-foreground/80 transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                Books
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/bees"
+                onClick={(event) =>
+                  event.currentTarget.closest("details")?.removeAttribute("open")
+                }
+                className="block rounded-xl px-4 py-3 text-sm font-medium uppercase tracking-[0.12em] text-foreground/80 transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                Bees
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                onClick={(event) =>
+                  event.currentTarget.closest("details")?.removeAttribute("open")
+                }
+                className="block rounded-xl px-4 py-3 text-sm font-medium uppercase tracking-[0.12em] text-foreground/80 transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                About
+              </Link>
+            </li>
+          </ul>
+        </details>
       </nav>
     </header>
   );
@@ -187,3 +270,4 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
+
