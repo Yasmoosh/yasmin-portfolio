@@ -55,6 +55,13 @@ const projects: Project[] = [
     tile: "bg-tile-2",
   },
   {
+    title: "Microlearning: Two-Way Data Binding in Blazor",
+    subtitle: "An animated microlearning explainer decoding two-way data binding in Blazor.",
+    href: "https://lnkd.in/p/dyFkqEBj",
+    image: "/blazor-microlearning.svg",
+    tile: "bg-tile-10",
+  },
+  {
     title: "Flipped Classroom Lab",
     subtitle: "An interactive digital environment for teacher training (Lovable & HTML/CSS).",
     href: "https://classroom-flip-lab.lovable.app/",
